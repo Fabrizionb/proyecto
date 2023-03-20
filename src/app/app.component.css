@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Aquí se ajusta la disposición de los componentes */
+.toolbar {
+  order: 1;
+}
+
+.navbar {
+  order: 2;
+}
+
+.student {
+  order: 3;
+}
+
+@media screen and (max-width: 768px) {
+  /* Para dispositivos móviles */
+  .navbar {
+    width: 100%;
+    float: none;
+    order: 3;
+  }
+
+  .student {
+    width: 100%;
+    float: none;
+    order: 2;
+  }
+}
