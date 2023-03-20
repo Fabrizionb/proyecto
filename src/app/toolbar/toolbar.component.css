@@ -1,28 +1,19 @@
-nav{
-  
-  background-color:#17181C;
-  text-align: center;
-}
-
-nav ul{
-   list-style: none;
-   display: inline-block;
-   padding:18px;
-}
-
-nav ul li{
-    float: left;
-    margin-top: 20px;
-}
-
-nav ul li a {
+header {
+    background-color: rgb(35, 51, 124);
+    height: var(--toolbar-height);
     color: white;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 16px;
-    padding: 18px;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-nav ul li a:hover{
-  background-color: #929fb3;
+ul {
+    display: flex;
+    gap: 50px;
+}
+
+li {
+    list-style: none;
+    font-weight: bold;
+    align-self: center;
 }

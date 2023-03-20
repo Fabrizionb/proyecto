@@ -1,0 +1,16 @@
+main {
+     position: absolute;
+  left: 40%;
+  top: 40%;
+}
+
+h1 {
+     
+}
+
+p {
+    margin-top: 15px;
+    line-height: 25px;
+    max-width:600px;
+  
+}
