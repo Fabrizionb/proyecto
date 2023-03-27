@@ -1,4 +1,8 @@
-<main>
+<main [ngStyle]="{
+  
+  'justify-content': 'center',
+  'align-items': 'center'
+  }">
   <div
     appRounded
     *ngIf="isLoading; else notLoadingTemplate"
@@ -11,9 +15,21 @@
     {{ isLoading ? "Loading..." : "Loaded!" }}
   </div>
 
+  <button
+    [ngStyle]="{
+      'padding': '10px',
+      'text-align': 'center',
+      'font-size': '16px'
+    }"
+    *ngIf="!isLoading"
+    (click)="showTable()"
+  >
+    Mostrar Alumnos
+  </button>
+
   <ng-template #notLoadingTemplate>
     <h1 [ngStyle]="{ 'text-align': 'center' }">Lista de estudiantes</h1>
-    <table>
+    <table *ngIf="showTableContent">
       <thead>
         <tr>
           <th [ngStyle]="{ 'text-align': 'center' }">Nombre</th>
@@ -27,12 +43,14 @@
           <td [ngStyle]="{ 'font-weight': 'bold', 'font-size': '20px' }">
             {{ estudiante.name | uppercase }}
           </td>
-          <td>{{ estudiante.age  }}</td>
+          <td>{{ estudiante.age }}</td>
           <td>{{ estudiante.email | uppercase }}</td>
           <td>
             <span
               [ngStyle]="{ color: estudiante.subscription ? 'green' : 'red' }"
-              >{{ estudiante.subscription ? "Activa"  : "No activa" | uppercase }}</span
+              >{{
+                estudiante.subscription ? "Activa" : ("No activa" | uppercase)
+              }}</span
             >
           </td>
         </tr>

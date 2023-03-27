@@ -14,29 +14,39 @@ interface Student {
 })
 export class HomeComponent {
   isLoading = false;
-  estudiantes: Student[] = [{
-    name: 'Juan Velazquez',
-    age: 20,
-    subscription: true,
-    email: "123@123.com"
-  },
-{
-    name: 'Maria Perez',
-    age: 25,
-    subscription: false,
-    email: "123@123.com"
-  },
-{
-    name: 'Pedro Martinez',
-    age: 30,
-    subscription: true,
-    email: "123@123.com"
+  estudiantes: Student[] = [
+    {
+      name: 'Juan Velazquez',
+      age: 20,
+      subscription: true,
+      email: "123@123.com"
+    },
+    {
+      name: 'Maria Perez',
+      age: 25,
+      subscription: false,
+      email: "123@123.com"
+    },
+    {
+      name: 'Pedro Martinez',
+      age: 30,
+      subscription: true,
+      email: "123@123.com"
+    },
+    {
+      name: 'Luisa Lopez',
+      age: 35,
+      subscription: false,
+      email: "123@123.com"
+    }
+  ];
+  showTableContent = false;
 
-},
-{
-    name: 'Luisa Lopez',
-    age: 35,
-    subscription: false,
-    email: "123@123.com"
-}];
+  showTable() {
+    this.isLoading = true;
+    setTimeout(() => {
+      this.isLoading = false;
+      this.showTableContent = true;
+    }, 3000);
+  }
 }
