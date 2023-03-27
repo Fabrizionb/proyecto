@@ -1,9 +1,9 @@
 <header>
     <nav>
         <ul>
-            <li><a routerLink="/home">Home</a></li>
-            <li><a routerLink="/about">About</a></li>
-            <li><a routerLink="/contact">Contact</a></li>
-        </ul>
+            <div *ngFor="let item of menuItems">
+              <li><a [href]="item.route">{{item.name}}</a></li>
+            </div>
+          </ul>
     </nav>
 </header>

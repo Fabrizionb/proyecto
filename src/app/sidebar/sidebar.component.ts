@@ -1,3 +1,4 @@
+
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent {
-
+  
+  menuItems = [
+    { name: 'Cursos', route: '/home' },
+    { name: 'Profesores', route: '/about' },
+    { name: 'Alumnos', route: '/contact' }
+  ];
 }

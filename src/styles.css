@@ -1,11 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;400;500;600;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Kanit', sans-serif;
 }
 
 :root {
     --toolbar-height: 64px;
     --sidebar-width: 230px;
+    --color-background-primary: #292c3b;
+    --color-background-secondary: #343d53;
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #9d4e4e;
+    --color-hover: #43a4f2;
+    --font-size-navbar: 35px;
+    --font-size-title: 30px;
+    --font-size-subtitle: 20px;
+    --font-size-text: 16px;
 }

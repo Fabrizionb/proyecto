@@ -1,12 +1,42 @@
 <main>
-    <h1>Lorem ipsum dolor sit amet consectetur</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dolor animi facere natus reiciendis nesciunt in excepturi esse, ad possimus fugiat est deserunt ea porro laboriosam optio? Quae, quidem est.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dolor animi facere natus reiciendis nesciunt in excepturi esse, ad possimus fugiat est deserunt ea porro laboriosam optio? Quae, quidem est.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dolor animi facere natus reiciendis nesciunt in excepturi esse, ad possimus fugiat est deserunt ea porro laboriosam optio? Quae, quidem est.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dolor animi facere natus reiciendis nesciunt in excepturi esse, ad possimus fugiat est deserunt ea porro laboriosam optio? Quae, quidem est.
-    </p>
-    
+  <div
+    appRounded
+    *ngIf="isLoading; else notLoadingTemplate"
+    [ngClass]="{ success: isLoading, error: !isLoading }"
+    [ngStyle]="{
+      'font-size': isLoading ? '30px' : '25px',
+      'text-align': 'center'
+    }"
+  >
+    {{ isLoading ? "Loading..." : "Loaded!" }}
+  </div>
+
+  <ng-template #notLoadingTemplate>
+    <h1 [ngStyle]="{ 'text-align': 'center' }">Lista de estudiantes</h1>
+    <table>
+      <thead>
+        <tr>
+          <th [ngStyle]="{ 'text-align': 'center' }">Nombre</th>
+          <th [ngStyle]="{ 'text-align': 'center' }">Edad</th>
+          <th [ngStyle]="{ 'text-align': 'center' }">Email</th>
+          <th [ngStyle]="{ 'text-align': 'center' }">Suscripción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let estudiante of estudiantes">
+          <td [ngStyle]="{ 'font-weight': 'bold', 'font-size': '20px' }">
+            {{ estudiante.name | uppercase }}
+          </td>
+          <td>{{ estudiante.age  }}</td>
+          <td>{{ estudiante.email | uppercase }}</td>
+          <td>
+            <span
+              [ngStyle]="{ color: estudiante.subscription ? 'green' : 'red' }"
+              >{{ estudiante.subscription ? "Activa"  : "No activa" | uppercase }}</span
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </ng-template>
 </main>
-
-
-

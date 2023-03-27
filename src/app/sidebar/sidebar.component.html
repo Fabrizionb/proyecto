@@ -1,7 +1,7 @@
 <aside>
     <ul>
-        <li><a routerLink="/home">Cursos</a></li>
-        <li><a routerLink="/about">Profesores</a></li>
-        <li><a routerLink="/contact">Alumnos</a></li>
+      <div *ngFor="let item of menuItems">
+        <li><a [href]="item.route">{{item.name}}</a></li>
+      </div>
     </ul>
-</aside>
+  </aside>

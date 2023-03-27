@@ -47,3 +47,13 @@ body {
     order: 2;
   }
 }
+
+.success {
+  background-color: rgb(35, 145, 35);
+  color: white;
+}
+
+.error {
+  background-color: rgb(210, 57, 57);
+  color: white;
+}

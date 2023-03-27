@@ -2,15 +2,42 @@ main {
      position: absolute;
   left: 40%;
   top: 40%;
+  color: var(--color-text-primary);
 }
 
 h1 {
-     
+  color: var(--font-size-title);
 }
 
 p {
     margin-top: 15px;
     line-height: 25px;
     max-width:600px;
-  
+    color: var(--font-size-text);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+/* th {
+  background-color: #dddddd;
+} */
+
+/* tr:nth-child(even) {
+  background-color: #f2f2f2;
+} */
+
+/* tr:hover {
+  background-color: #ddd;
+} */
+
+td {
+  border: 1px solid #dddddd;
 }
