@@ -1,0 +1,3 @@
+<ul [ngStyle]="{'display': 'flex', 'flex-direction': direction}">
+  <li (click)="select.emit(item)" *ngFor="let item of items">{{item.name}}</li>
+</ul>

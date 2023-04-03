@@ -1,9 +1,7 @@
 <header>
-    <nav>
-        <ul>
-            <div *ngFor="let item of menuItems">
-              <li><a [href]="item.route">{{item.name}}</a></li>
-            </div>
-          </ul>
-    </nav>
+  <nav>
+    <div>
+      <app-list-generator [items]="toolbar" [direction]="direction"></app-list-generator>
+    </div>
+  </nav>
 </header>

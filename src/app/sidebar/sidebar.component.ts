@@ -8,9 +8,14 @@ import { Component } from '@angular/core';
 })
 export class SidebarComponent {
   
-  menuItems = [
+  sidebar = [
     { name: 'Cursos', route: '/home' },
     { name: 'Profesores', route: '/about' },
     { name: 'Alumnos', route: '/contact' }
   ];
+  direction = 'column';
+
+  onSelect(ev: string)  {
+    console.log(ev)
+  }
 }

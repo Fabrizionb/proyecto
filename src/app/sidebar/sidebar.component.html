@@ -1,7 +1,3 @@
 <aside>
-    <ul>
-      <div *ngFor="let item of menuItems">
-        <li><a [href]="item.route">{{item.name}}</a></li>
-      </div>
-    </ul>
-  </aside>
+  <app-list-generator (select)="onSelect($event)"  [items]="sidebar" [direction]="direction"></app-list-generator>
+</aside>

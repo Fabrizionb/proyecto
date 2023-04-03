@@ -6,6 +6,10 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { HomeComponent } from './home/home.component';
 import { PageWrapperComponent } from './page-wrapper/page-wrapper.component';
 import { RoundedModule } from './directives/rounded/rounded.module';
+import { HomePageComponent } from './views/home-page/home-page.component';
+import { ListGeneratorComponent } from './list-generator/list-generator.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormComponent } from './forms/reactive-form/reactive-form.component';
 
 @NgModule({
   // componentes
@@ -15,12 +19,16 @@ import { RoundedModule } from './directives/rounded/rounded.module';
     ToolbarComponent,
     HomeComponent,
     PageWrapperComponent,
+    HomePageComponent,
+    ListGeneratorComponent,
+    ReactiveFormComponent,
 
   ],
   // modulos
   imports: [
     BrowserModule,
-    RoundedModule
+    RoundedModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -8,8 +8,9 @@ header {
 }
 
 ul {
-  display: flex;
+  display: flex!important;
   gap: 50px;
+  background-color: crimson;
 }
 
 li {

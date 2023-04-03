@@ -20,7 +20,6 @@ body {
   display: table;
 }
 
-/* Aquí se ajusta la disposición de los componentes */
 .toolbar {
   order: 1;
 }
@@ -34,7 +33,7 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  /* Para dispositivos móviles */
+
   .navbar {
     width: 100%;
     float: none;
@@ -56,4 +55,11 @@ body {
 .error {
   background-color: rgb(210, 57, 57);
   color: white;
+}
+
+.formBackground {
+
+  min-height:50vh;
+  min-width:90vh;
+  display: block;
 }
