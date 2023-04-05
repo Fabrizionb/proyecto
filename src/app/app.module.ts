@@ -10,7 +10,8 @@ import { HomePageComponent } from './views/home-page/home-page.component';
 import { ListGeneratorComponent } from './list-generator/list-generator.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ReactiveFormComponent } from './forms/reactive-form/reactive-form.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DashboardModule } from './dashboard/dashboard.module';
 @NgModule({
   // componentes
   declarations: [
@@ -28,7 +29,9 @@ import { ReactiveFormComponent } from './forms/reactive-form/reactive-form.compo
   imports: [
     BrowserModule,
     RoundedModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    DashboardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
